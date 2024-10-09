@@ -1,7 +1,6 @@
 <?php 
 
     class Fechas{
-        //protected string $fecha; //String de la fecha
         protected $mes = array(); //Array del año
         protected $infoMes = array(); //Array del mes
         public function __construct() {
@@ -29,6 +28,7 @@
         }
         */
 
+        //Getters y Setters
         public function getMes() {
             return $this->mes;
         }
@@ -43,5 +43,16 @@
 
         public function setInfoMes($infoMes) {
             $this->infoMes = $infoMes;
+        }
+
+        public function esBisiesto($fecha){
+            
+            //Utilizar explode
+            
+            if ($y%4==0 and ($y%100!=0 or $y%400==0)){
+                return true;
+            }
+
+            return false;
         }
 }
