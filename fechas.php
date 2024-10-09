@@ -1,6 +1,7 @@
 <?php 
 
     class Fechas{
+        //Atributos de fecha
         protected $mes = array(); //Array del año
         protected $infoMes = array(); //Array del mes
         public function __construct() {
@@ -53,12 +54,17 @@
             // Extraer el año
             $anio = $composicionFecha['anio'];
 
+            
             // Verificar si es un año bisiesto
             if ($anio % 4 == 0 && ($anio % 100 != 0 || $anio % 400 == 0)){
-                return true;
+                $resultado = true;
             }
 
-            return false;
+            $bisiesto = false;
+
+            if($composicionFecha[1] == 02 && $bisiesto){
+                $this->infoMes['febrero'] == 29;
+            }
         }
 
         private function analisisFecha($fecha){
@@ -75,4 +81,3 @@
 
 
     }
-?>
