@@ -64,7 +64,8 @@ class Fechas {
     public function getNombreYDiasMes($mes) {
         // Obtener el nombre del mes
         $nombreMes = array_keys($this->mes[$mes])[0]; // array_keys() devuelve las claves del array del mes específico; como solo hay una clave (el nombre del mes), usamos [0] para acceder a ella
-
+        //Fuente: https://www.php.net/manual/es/function.array-keys.php
+        
         // Obtener el número de días del mes
         $diasMes = $this->mes[$mes][$nombreMes]; // Días del mes
         
