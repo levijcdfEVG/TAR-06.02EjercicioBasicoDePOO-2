@@ -45,14 +45,34 @@
             $this->infoMes = $infoMes;
         }
 
+    
         public function esBisiesto($fecha){
+            // Utilizar la función analisisFecha para obtener los componentes de la fecha
+            $composicionFecha = $this->analisisFecha($fecha);
             
-            //Utilizar explode
-            
-            if ($y%4==0 and ($y%100!=0 or $y%400==0)){
+            // Extraer el año
+            $anio = $composicionFecha['anio'];
+
+            // Verificar si es un año bisiesto
+            if ($anio % 4 == 0 && ($anio % 100 != 0 || $anio % 400 == 0)){
                 return true;
             }
 
             return false;
         }
-}
+
+        private function analisisFecha($fecha){
+            // Separa la fecha por "/"
+            $partesFecha = explode("/", $fecha);
+
+            // Devuelve las partes como enteros
+            return [
+                'dia' => (int)$partesFecha[0],
+                'mes' => (int)$partesFecha[1],
+                'anio' => (int)$partesFecha[2]
+            ];
+        }
+
+
+    }
+?>
