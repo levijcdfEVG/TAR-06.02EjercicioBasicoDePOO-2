@@ -1,5 +1,4 @@
 body {
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -19,19 +18,19 @@ form {
     text-align: center;
 }
 
+form > label{
+    size: x-large;
+    font-weight: bolder;
+}
+
 input[type="text"] {
     padding: 10px;
     width: 80%;
     border-radius: 5px;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    outline: none;
 }
 
-input[type="text"]:focus {
-    border-color: #007bff;
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
-}
 
 input[type="submit"]{
     margin: 5%;
