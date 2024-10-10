@@ -47,13 +47,13 @@ class Fechas {
 
     private function analisisFecha($fecha) {
         // Separa la fecha por "/"
-        $partesFecha = explode("/", $fecha);
+        $partesFecha = explode("-", $fecha);
     
         // Almacena las partes como enteros en un array
         $fechaAnalizada = [
-            'dia' => (int)$partesFecha[0], // Día de la fecha
-            'mes' => (int)$partesFecha[1], // Mes de la fecha
-            'anio' => (int)$partesFecha[2] // Año de la fecha
+            'anio' => (int)$partesFecha[0], 
+            'mes' => (int)$partesFecha[1], 
+            'dia' => (int)$partesFecha[2] 
         ];
     
         // Devuelve el array con las partes de la fecha
