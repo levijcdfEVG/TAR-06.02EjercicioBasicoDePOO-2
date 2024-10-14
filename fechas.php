@@ -2,8 +2,8 @@
 
 class Fechas {
     // Atributos de fecha
-    protected $mes = array(); // Array que almacena los meses del año
-    protected $infoMes = array(); // Array que almacena información del mes
+    private $mes = array(); // Array que almacena los meses del año
+    private $infoMes = array(); // Array que almacena información del mes
 
     public function __construct() {
         // Define los días de cada mes
