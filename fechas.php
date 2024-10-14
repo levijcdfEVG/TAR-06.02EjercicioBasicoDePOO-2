@@ -41,8 +41,9 @@ class Fechas {
         if ($composicionFecha['mes'] == 2 && $resultado) {
             $this->mes[2]['febrero'] = 29; // Cambiar febrero a 29 días
         }
-
-        return $composicionFecha; // Devolver la composición de la fecha
+        $cadenaFechaFinal = $composicionFecha['dia']." de ".$composicionFecha['dia']." de ".$composicionFecha['anio'];
+        
+        return $cadenaFechaFinal; // Devolver la composición de la fecha
     }
 
     private function analisisFecha($fecha) {
@@ -60,7 +61,7 @@ class Fechas {
         return $fechaAnalizada; // Retornar el array analizado
     }
     
-
+    /*
     public function getNombreYDiasMes($mes) {
         // Obtener el nombre del mes
         $nombreMes = array_keys($this->mes[$mes])[0]; // array_keys() devuelve las claves del array del mes específico; como solo hay una clave (el nombre del mes), usamos [0] para acceder a ella
@@ -77,4 +78,5 @@ class Fechas {
         // Devolver el array con el nombre y los días
         return $infoMes; // Retornar el array separado
     }
+    */    
 }
